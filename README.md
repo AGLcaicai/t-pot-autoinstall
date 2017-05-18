@@ -1,3 +1,11 @@
+#### 多谢T-POT的开源
+
+因为有些包内容下载慢，所以我把自己在虚拟机里安装完成的压缩包上传到了百度网盘。
+
+百度网盘 [戳这里下载]()制作中
+
+以下是官方
+
 # Autoinstall T-Pot on Ubuntu 16.04.x 
 This script will install [T-Pot 16.10](http://dtag-dev-sec.github.io/mediator/feature/2016/10/31/t-pot-16.10.html) on a fresh Ubuntu 16.04.x LTS (64bit). 
 
