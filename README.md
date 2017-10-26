@@ -2,7 +2,7 @@
 
 以下两个安装脚本在ubuntu16.04 与ubuntu16.10系统测试通过
 
- [ubuntu16.04]()   |   [ubuntu16.10]()
+ [ubuntu16.04](https://github.com/n3uz/t-pot-autoinstall/blob/master/install_ubuntu16.04.sh)   |   [ubuntu16.10](https://github.com/n3uz/t-pot-autoinstall/blob/master/install_ubuntu16.10.sh)
 
 ## 部署前置条件
 - root运行安装脚本
