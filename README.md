@@ -1,5 +1,7 @@
 #### 感谢[T-POT](https://github.com/dtag-dev-sec/t-pot-autoinstall)
 
+# 正在调试中---2017-10-26
+
 本脚本针对中国区调整加速！！！，境外使用肯定会减速！！！！
 
 #### USED WITHIN THE CHINESE GFW !!! YOU FREE COUNTRY WILL SLOOOOOOOOOOOOOOOOOOOOOOOOOOW!!!
