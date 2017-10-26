@@ -1,6 +1,8 @@
-#### 感谢[T-POT](https://github.com/dtag-dev-sec/t-pot-autoinstall)
+# 正在调试中---2017-10-26 请先不要使用
+# 正在调试中---2017-10-26 请先不要使用
+# 正在调试中---2017-10-26 请先不要使用，我正在把部署代码搬运到coding
 
-# 正在调试中---2017-10-26
+#### 感谢[T-POT](https://github.com/dtag-dev-sec/t-pot-autoinstall)
 
 本脚本针对中国区调整加速！！！，境外使用肯定会减速！！！！
 
