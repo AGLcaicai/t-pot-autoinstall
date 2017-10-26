@@ -1,7 +1,3 @@
-# 正在调试中---2017-10-26 请先不要使用
-# 正在调试中---2017-10-26 请先不要使用
-# 正在调试中---2017-10-26 请先不要使用，我正在把部署代码搬运到coding
-
 #### 感谢[T-POT](https://github.com/dtag-dev-sec/t-pot-autoinstall)
 
 本脚本针对中国区调整加速！！！，境外使用肯定会减速！！！！
@@ -56,14 +52,12 @@ z@ubuntu:~$ cat /home/z/.ssh/id_rsa.pub >> /home/z/.ssh/authorized_keys
 ```
 保存私钥/home/z/.ssh/id_rsa 文件，用于后面的登录。
 
-## 安装过程中要去git clone 代码回来，有点慢，需要等等
-
-TODO 把代码克隆到coding
 
 ##  脚本修改内容
 
 #### 替换ubuntu中文源
 
+cn.ubuntu
 
 #### pip使用豆瓣源、npm使用淘宝源
 
@@ -82,4 +76,6 @@ tee -a /etc/docker/daemon.json <<EOF
 EOF
 ```
 
-tpot 官方
+#### git 代码搬运到coding
+
+https://git.coding.net/n3uz/tpotce-16.10.git
