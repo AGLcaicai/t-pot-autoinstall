@@ -55,18 +55,28 @@ z@ubuntu:~$ cat /home/z/.ssh/id_rsa.pub >> /home/z/.ssh/authorized_keys
 
 ##  脚本修改内容
 
-#### 替换ubuntu中文源
+#### 1、替换ubuntu中文源
 
 cn.ubuntu
 
-#### pip使用豆瓣源、npm使用淘宝源
+#### 2、pip使用豆瓣源
+
 
 ```
 pip install alerta -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
+```
+
+#### 3、npm使用淘宝源
+
+```
 npm --registry https://registry.npm.taobao.org install https://github.com/t3chn0m4g3/wetty -g
 ```
 
-#### docker增加了aliyun的docker mirror
+#### 4、git 代码搬运到coding
+
+https://git.coding.net/n3uz/tpotce-16.10.git
+
+#### 5、docker增加了aliyun的docker mirror
 ```
 fuECHO "### Patching docker using aliyun mirrors."
 tee -a /etc/docker/daemon.json <<EOF
@@ -76,6 +86,4 @@ tee -a /etc/docker/daemon.json <<EOF
 EOF
 ```
 
-#### git 代码搬运到coding
-
-https://git.coding.net/n3uz/tpotce-16.10.git
+--完--
