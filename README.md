@@ -1,4 +1,8 @@
-#### 多谢T-POT的开源
+#### 多谢[T-POT](https://github.com/dtag-dev-sec/t-pot-autoinstall)的开源
+
+本脚本针对中国区调整加速！！！，境外使用肯定会减速！！！！
+
+#### USED WITHIN THE CHINESE GFW !!! YOUR FREE COUNTRY WILL SLOOOOOOOOOOOOOOOOOOOOOOOOOOW!!!
 
 以下两个安装脚本在ubuntu16.04 与ubuntu16.10系统测试通过
 
