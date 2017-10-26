@@ -52,6 +52,10 @@ z@ubuntu:~$ cat /home/z/.ssh/id_rsa.pub >> /home/z/.ssh/authorized_keys
 ```
 保存私钥/home/z/.ssh/id_rsa 文件，用于后面的登录。
 
+## 安装过程中要去git clone 代码回来，有点慢，需要等等
+
+TODO 把代码克隆到coding
+
 ##  脚本修改内容
 
 #### 替换ubuntu中文源
