@@ -1,23 +1,15 @@
 #!/bin/bash
 
 #####################################################################
-#																 	#						
+# 仅限中国网使用，加速都是针对中国的，国外会减速				 	#	
 # This script is used for ubuntu16.04 in China!!!!!! 				#
 # If you are out of the GFW,It's sloooooooooooooooooooooooooooooow  #
-#																	#
+# 1、修改Ubuntu源为中国镜像 										#
+# 2、修改pip安装源为douban											#
+# 3、修改npm安装源为taobao											#
+# 4、修改git源为coding												#
+# 5、docker增加aliyun mirror										#
 #####################################################################
-
-
-##########################################################
-# T-Pot 16.10 install script                             #
-# Ubuntu server 16.04.0x, x64                            #
-#                                                        #
-# v1.1 by av, DTAG 2017-07-03                            #
-#                                                        #
-# based on T-Pot 16.10 Community Edition Script          #
-# v16.10.0 by mo, DTAG, 2016-12-03                       #
-##########################################################
-
 
 # Let's create a function for colorful output
 fuECHO () {
@@ -258,12 +250,13 @@ EOF
 fuECHO "### Generating a self-signed-certificate for NGINX."
 fuECHO "### If you are unsure you can use the default values."
 mkdir -p /etc/nginx/ssl
-openssl req -nodes -x509 -sha512 -newkey rsa:8192 -keyout "/etc/nginx/ssl/nginx.key" -out "/etc/nginx/ssl/nginx.crt" -days 3650
+openssl req -nodes -x509 -sha512 -newkey rsa:4096 -keyout "/etc/nginx/ssl/nginx.key" -out "/etc/nginx/ssl/nginx.crt" -days 3650
 
 # Installing alerta-cli, wetty
 fuECHO "### Installing alerta-cli."
 
 # douban source
+pip install -i http://pypi.douban.com/simple  --trusted-host pypi.douban.com --upgrade pip
 pip install alerta -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
 fuECHO "### Installing wetty."
 ln -s /usr/bin/nodejs /usr/bin/node
@@ -314,7 +307,7 @@ sleep 5
 # getting t-pot git repo
 fuECHO "### Cloning T-Pot Repository."
 cwdir=$(pwd)
-git clone https://github.com/dtag-dev-sec/tpotce.git
+git clone -b 16.10 https://git.coding.net/n3uz/tpotce-cn.git
 cp -R $cwdir/tpotce/installer/ $cwdir
 rm -rf $cwdir/tpotce/
 rm $cwdir/installer/install.sh $cwdir/installer/rc.local.install
