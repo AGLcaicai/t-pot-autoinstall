@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #####################################################################
-# 仅限中国网使用，加速都是针对中国的，国外会减速	
+# 仅限中国网使用，加速都是针对中国的，国外会减速
 # This script is used for ubuntu16.04 in China!!!!!!
-# If you are out of the GFW,It's sloooooooooooooooooooooooooooooow  
+# If you are out of the GFW,It's sloooooooooooooooooooooooooooooow
 # 1、修改Ubuntu源为中国镜像
 # 2、修改pip安装源为douban
 # 3、修改npm安装源为taobao
@@ -308,7 +308,7 @@ sleep 5
 # getting t-pot git repo
 fuECHO "### Cloning T-Pot Repository."
 cwdir=$(pwd)
-git clone -b 16.10 https://git.coding.net/n3uz/tpotce-cn.git
+git clone https://git.coding.net/n3uz/tpotce-16.10.git $(pwd)/tpotce
 cp -R $cwdir/tpotce/installer/ $cwdir
 rm -rf $cwdir/tpotce/
 rm $cwdir/installer/install.sh $cwdir/installer/rc.local.install
