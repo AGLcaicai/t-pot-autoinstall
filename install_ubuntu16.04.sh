@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #####################################################################
-# 仅限中国网使用，加速都是针对中国的，国外会减速
+# 仅限中国网使用，加速都是针对中国的，国外会减速 
 # This script is used for ubuntu16.04 in China!!!!!!
 # If you are out of the GFW,It's sloooooooooooooooooooooooooooooow
 # 1、修改Ubuntu源为中国镜像
