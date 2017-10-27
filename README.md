@@ -1,8 +1,18 @@
 #### 感谢[T-POT](https://github.com/dtag-dev-sec/t-pot-autoinstall)
 
-本脚本针对中国区调整加速！！！，境外使用肯定会减速！！！！
+```
+#####################################################################
+# 仅限中国网使用，加速都是针对中国的，国外会减速
+# This script is used for ubuntu16.04 in China!!!!!!
+# If you are out of the GFW,It's sloooooooooooooooooooooooooooooow
+# 1、修改Ubuntu源为中国镜像
+# 2、修改pip安装源为douban
+# 3、修改npm安装源为taobao
+# 4、修改git源为coding
+# 5、docker增加aliyun mirror
+#####################################################################
 
-#### USED WITHIN THE CHINESE GFW !!! YOU FREE COUNTRY WILL SLOOOOOOOOOOOOOOOOOOOOOOOOOOW!!!
+```
 
 以下两个安装脚本在ubuntu16.04 与ubuntu16.10系统测试通过
 
