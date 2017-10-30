@@ -179,19 +179,25 @@ read choice
 # End checks
 
 # replace apt sources with China 
+fuECHO "### Replace 163.com sources."
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
+apt-get clean
 cat > /etc/apt/sources.list << EOF
-deb http://cn.archive.ubuntu.com/ubuntu/ xenial main restricted universe multiverse
-deb http://cn.archive.ubuntu.com/ubuntu/ xenial-security main restricted universe multiverse
-deb http://cn.archive.ubuntu.com/ubuntu/ xenial-updates main restricted universe multiverse
-deb http://cn.archive.ubuntu.com/ubuntu/ xenial-backports main restricted universe multiverse
-deb http://cn.archive.ubuntu.com/ubuntu/ xenial-proposed main restricted universe multiverse
-deb-src http://cn.archive.ubuntu.com/ubuntu/ xenial main restricted universe multiverse
-deb-src http://cn.archive.ubuntu.com/ubuntu/ xenial-security main restricted universe multiverse
-deb-src http://cn.archive.ubuntu.com/ubuntu/ xenial-updates main restricted universe multiverse
-deb-src http://cn.archive.ubuntu.com/ubuntu/ xenial-backports main restricted universe multiverse
-deb-src http://cn.archive.ubuntu.com/ubuntu/ xenial-proposed main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ xenial main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ xenial-security main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ xenial-updates main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ xenial-backports main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ xenial-proposed main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ xenial main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ xenial-security main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ xenial-updates main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ xenial-backports main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ xenial-proposed main restricted universe multiverse
 EOF
+rm -fR /var/lib/apt/lists/* 
+mkdir /var/lib/apt/lists/partial  
+apt-get update  --fix-missing
+
 
 # Let's pull some updates
 fuECHO "### Pulling Updates."
