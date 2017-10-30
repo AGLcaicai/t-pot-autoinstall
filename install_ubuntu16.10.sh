@@ -437,9 +437,8 @@ cp    $cwdir/usr/share/dict/* /usr/share/dict/
 
 # Let's set the hostname
 fuECHO "### Setting a new hostname."
-a=$(fuRANDOMWORD /usr/share/dict/a.txt)
-n=$(fuRANDOMWORD /usr/share/dict/n.txt)
-myHOST=$a$n
+a=$(fuRANDOMWORD /usr/share/dict/names)
+myHOST=$a
 hostnamectl set-hostname $myHOST
 sed -i 's#127.0.1.1.*#127.0.1.1\t'"$myHOST"'#g' /etc/hosts
 
@@ -486,7 +485,7 @@ EOF
 
 # Let's create ews.ip before reboot and prevent race condition for first start
 myLOCALIP=$(hostname -I | awk '{ print $1 }')
-myEXTIP=$(curl myexternalip.com/raw)
+myEXTIP="nil"
 sed -i "s#IP:.*#IP: $myLOCALIP, $myEXTIP#" /etc/issue
 sed -i "s#SSH:.*#SSH: ssh -l $myuser -p 64295 $myLOCALIP#" /etc/issue
 sed -i "s#WEB:.*#WEB: https://$myLOCALIP:64297#" /etc/issue
