@@ -311,7 +311,7 @@ sleep 5
 
 
 # getting t-pot git repo
-fuECHO "### Cloning T-Pot Repository."
+fuECHO "### Cloning T-Pot Repository From https://git.coding.net/n3uz/tpotce-16.10.git."
 cwdir=$(pwd)
 git clone https://git.coding.net/n3uz/tpotce-16.10.git $(pwd)/tpotce
 cp -R $cwdir/tpotce/installer/ $cwdir
