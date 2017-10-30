@@ -19,8 +19,9 @@
  [ubuntu16.04](https://github.com/n3uz/t-pot-autoinstall/blob/master/install_ubuntu16.04.sh)   |   [ubuntu16.10](https://github.com/n3uz/t-pot-autoinstall/blob/master/install_ubuntu16.10.sh)
 
 ## 部署前置条件
-- root运行安装脚本
+
 - 准备普通用户，并为普通用户创建公私钥，用于密钥登录。
+- root运行安装脚本
 
 以普通用户z为例
 
@@ -67,7 +68,7 @@ z@ubuntu:~$ cat /home/z/.ssh/id_rsa.pub >> /home/z/.ssh/authorized_keys
 
 #### 1、替换ubuntu中文源
 
-cn.ubuntu
+163.com
 
 #### 2、pip使用豆瓣源
 
