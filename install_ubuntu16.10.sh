@@ -2,7 +2,7 @@
 
 #####################################################################
 # 仅限中国网使用，加速都是针对中国的，国外会减速
-# This script is used for ubuntu16.04 in China!!!!!!
+# This script is used for ubuntu16.10 in China!!!!!!
 # If you are out of the GFW,It's sloooooooooooooooooooooooooooooow
 # 1、修改Ubuntu源为中国镜像
 # 2、修改pip安装源为douban
@@ -91,7 +91,6 @@ if ! fgrep -q "PubkeyAuthentication yes" /etc/ssh/sshd_config
 		exit 1
 fi
 
-fuECHO "### Tested for ubuntu16.10  Just go on"
 # check for ubuntu 16.04. distribution
 #release=$(lsb_release -r|cut -d $'\t' -f2)
 #if [ $release != "16.04" ]
@@ -184,20 +183,21 @@ fuECHO "### Replace 163.com sources."
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
 apt-get clean
 cat > /etc/apt/sources.list << EOF
-deb http://mirrors.163.com/ubuntu/ yakkety main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ yakkety-security main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ yakkety-updates main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ yakkety-backports main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ yakkety-proposed main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ yakkety main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ yakkety-security main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ yakkety-updates main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ yakkety-backports main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ yakkety-proposed main restricted universe multiverse
+deb http://cn.archive.ubuntu.com/ubuntu/ yakkety main restricted universe multiverse
+deb http://cn.archive.ubuntu.com/ubuntu/ yakkety-security main restricted universe multiverse
+deb http://cn.archive.ubuntu.com/ubuntu/ yakkety-updates main restricted universe multiverse
+deb http://cn.archive.ubuntu.com/ubuntu/ yakkety-backports main restricted universe multiverse
+deb http://cn.archive.ubuntu.com/ubuntu/ yakkety-proposed main restricted universe multiverse
+deb-src http://cn.archive.ubuntu.com/ubuntu/ yakkety main restricted universe multiverse
+deb-src http://cn.archive.ubuntu.com/ubuntu/ yakkety-security main restricted universe multiverse
+deb-src http://cn.archive.ubuntu.com/ubuntu/ yakkety-updates main restricted universe multiverse
+deb-src http://cn.archive.ubuntu.com/ubuntu/ yakkety-backports main restricted universe multiverse
+deb-src http://cn.archive.ubuntu.com/ubuntu/ yakkety-proposed main restricted universe multiverse
 EOF
 rm -fR /var/lib/apt/lists/* 
 mkdir /var/lib/apt/lists/partial  
 apt-get update  --fix-missing
+
 
 # Let's pull some updates
 fuECHO "### Pulling Updates."
@@ -287,7 +287,7 @@ fuECHO "### Allow SSH password authentication from RFC1918 networks"
 tee -a /etc/ssh/sshd_config <<EOF
 
 
-Match address 127.0.0.1,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16
+Match address 127.0.0.1,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,1.1.0.0/16
     PasswordAuthentication yes
 EOF
 
