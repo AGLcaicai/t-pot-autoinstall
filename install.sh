@@ -9,7 +9,7 @@
 # v16.10.0 by mo, DTAG, 2016-12-03                       #
 ##########################################################
 
-
+ 
 # Let's create a function for colorful output
 fuECHO () {
 local myRED=1
