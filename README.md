@@ -96,4 +96,25 @@ tee -a /etc/docker/daemon.json <<EOF
 EOF
 ```
 
+## 如果安装过程中遇到 “Hash Sum mismatch”错误，请自行更换脚本中另外的源
+
+如下是ubuntu16.10 使用163的源
+```
+cat > /etc/apt/sources.list << EOF
+deb http://mirrors.163.com/ubuntu/ yakkety main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ yakkety-security main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ yakkety-updates main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ yakkety-backports main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ yakkety-proposed main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ yakkety main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ yakkety-security main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ yakkety-updates main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ yakkety-backports main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ yakkety-proposed main restricted universe multiverse
+EOF
+```
+
+源地址请参考 [ubuntu 源列表](http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8)
+
+
 --完--
